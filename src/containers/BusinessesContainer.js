@@ -14,7 +14,7 @@ class BusinessContainer extends React.Component{
         return(
            <div>
              <BusinessForm/>
-             <Businesses/>
+             <Businesses businesses={this.props.businesses}/>
              
            </div> 
         )
