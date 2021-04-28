@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {fetchBusinesses} from './actions/fetchBusinesses'
+//import {connect} from 'react-redux'
+//import {fetchBusinesses} from './actions/fetchBusinesses'
 import BusinessContainer from './containers/BusinessesContainer'
 
 class App extends React.Component{
@@ -16,4 +16,4 @@ class App extends React.Component{
   }
 }
 
-export default connect( null, {fetchBusinesses})(App);
+export default App;
