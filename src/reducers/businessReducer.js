@@ -1,4 +1,4 @@
-export default function businessReducer(state = {business: []}, action){
+export default function businessReducer(state = {businesses: []}, action){
     
     switch (action.type){
       case 'FETCH_BUSINESSES':
