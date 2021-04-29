@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import {addBusiness} from '../actions/addBusiness'
 
 
 //   :name, :number, :email, :industry, :contacted_id
@@ -12,20 +14,23 @@ class BusinessForm extends React.Component {
         industry: ''
 
     };
-        //eventlistner (e)
+        
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         });
 
     };
-
-
+       
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.addBusiness
+    }
 
     render(){
         return(
            <div>
-               <form>
+               <form onSubmit={this.handleSubmit}>
                    <label>Business Name: </label>
                    <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/><br/>
 
@@ -37,10 +42,12 @@ class BusinessForm extends React.Component {
 
                    <label>Industry: </label>
                    <input type='text' placeholder='Industry' value={this.state.industry} name="industry"  onChange={this.handleChange}/><br/><br/>
+
+                    <input type="submit"/>
                </form>
            </div> 
         )
     }
 }
 
-export default BusinessForm
+export default connect(null, { addBusiness })(BusinessForm)
