@@ -25,6 +25,13 @@ class BusinessForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.addBusiness(this.state);
+        this.setState({
+            name: '',
+            number: '',
+            email: '', 
+            industry: ''
+      
+        })
     }
 
     render(){

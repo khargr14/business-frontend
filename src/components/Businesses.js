@@ -1,4 +1,5 @@
 import React from 'react'
+import Business from './Business'
 
 
 
@@ -8,7 +9,8 @@ import React from 'react'
                                                                  //   :name, :number, :email, :industry, :contacted_id
     return(
         <div>
-         {props.businesses.map(business => <li key={business.id}>{business.name} - {business.number} - {business.email} - {business.industry}</li>)}
+         {props.businesses.map(business => 
+         <div key={business.id}><Business business={business}/></div>)}
         </div>
     )
  
