@@ -21,7 +21,7 @@ return (
        
        <h5> {business?business.number:null} - {business?business.email:null} - {business?business.industry:null}  </h5>     
     </h3>
-    <ContactedsContainer/>
+    <ContactedsContainer business={business}/>
   </div>
 )
 
