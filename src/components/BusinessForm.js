@@ -12,12 +12,14 @@ class BusinessForm extends React.Component {
         number: '',
         email: '', 
         industry: ''
+
     };
         
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         });
+
     };
        
     handleSubmit = (event) => {
@@ -28,7 +30,8 @@ class BusinessForm extends React.Component {
             number: '',
             email: '', 
             industry: ''
-        });
+      
+        })
     }
 
     render(){
