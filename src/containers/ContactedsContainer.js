@@ -9,7 +9,7 @@ class ContactedsContainer extends React.Component {
 
         return(
             <div>
-                <ContactedInput/>
+                <ContactedInput business={this.props.business}/>
                 <Contacteds contacteds={this.props.business && this.props.business.contacteds}/>
             </div>
         )

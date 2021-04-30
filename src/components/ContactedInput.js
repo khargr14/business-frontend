@@ -64,5 +64,5 @@ handleSubmit = (event) => {
 
     }
 }
-
+//,{addContacted}
 export default connect(null)(ContactedInput)
