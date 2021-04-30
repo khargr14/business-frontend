@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { deleteBusiness } from '../actions/deleteBusiness';
+import { Button } from 'react-bootstrap';
+
 
 
 const Businesses = (props) => {
@@ -15,7 +17,7 @@ const Businesses = (props) => {
       {props.businesses.map(business =>
         <li key={business.id}>
           <Link to={`/businesses/${business.id}`}>{business.name} - {business.number}- {business.email}- {business.industry}</Link>
-          - <button onClick={() => handleDelete(business)}>Delete</button><br />
+          - <Button onClick={() => handleDelete(business)}>Delete</Button><br />
         </li>)}
 
     </div>
