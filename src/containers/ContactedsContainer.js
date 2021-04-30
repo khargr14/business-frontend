@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactedInput from '../components/ContactedInput'
 
 
 class ContactedsContainer extends React.Component {
@@ -7,7 +8,7 @@ class ContactedsContainer extends React.Component {
 
         return(
             <div>
-                ContactedsContainer
+                <ContactedInput/>
             </div>
         )
     }
