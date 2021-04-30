@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import {Redirect} from 'react-router-dom'
 import ContactedsContainer from '../containers/ContactedsContainer'
 
@@ -7,7 +7,10 @@ import ContactedsContainer from '../containers/ContactedsContainer'
 
 const Business = (props) => {
 
-const business = props.businesses.filter(business => business.id == props.match.params.id)[0]
+//const business = props.businesses.filter(business => business.id == props.match.params.id)[0]
+const business = useMemo(()=>{
+  return props.businesses.filter(business => business.id == props.match.params.id)[0]
+}, [props.businesses,props.match.params.id]);
 //let business = props.businesses[props.match.params.id-1];
 // let business=props.businesses[props.match.params.id-1];
 // console.log(business,"data")

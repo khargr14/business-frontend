@@ -6,6 +6,15 @@ export default function businessReducer(state = { businesses: [] }, action) {
     case 'ADD_BUSINESS': {
       return { ...state, businesses: [...state.businesses, action.payload] };
     }
+    case 'EDIT_BUSINESS': {
+      return {
+         ...state,
+         businesses: state.businesses.map(business => {
+          if(business.id!==action.payload.id) return business;
+          return action.payload;
+        })
+      };
+    }
 
     case "DELETE_BUSINESS": {
       const newBusinesses = state.businesses.filter(business => business.id !== action.payload)

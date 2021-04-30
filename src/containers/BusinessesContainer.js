@@ -5,6 +5,8 @@ import Businesses from '../components/Businesses'
 import BusinessForm from '../components/BusinessForm'
 import { fetchBusinesses } from '../actions/fetchBusinesses'
 import Business from '../components/Business'
+import BusinessFormEdit from '../components/BusinessFormEdit'
+
 class BusinessContainer extends React.Component {
 
     componentDidMount() {
@@ -20,9 +22,10 @@ class BusinessContainer extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path='/businesses' render={(routerProps) => <Businesses {...routerProps} businesses={this.props.businesses} />} />
                     <Route path='/businesses/new' component={BusinessForm} />
+                    <Route path='/businesses/:id/edit' render={(routerProps) => <BusinessFormEdit {...routerProps} businesses={this.props.businesses} />} />
                     <Route path='/businesses/:id' render={(routerProps) => <Business {...routerProps} businesses={this.props.businesses} />} />
+                    <Route path='/businesses' render={(routerProps) => <Businesses {...routerProps} businesses={this.props.businesses} />} />
                 </Switch>
             </div>
         )

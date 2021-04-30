@@ -17,7 +17,7 @@ const Businesses = (props) => {
       {props.businesses.map(business =>
         <li key={business.id}>
           <Link to={`/businesses/${business.id}`}>{business.name} - {business.number}- {business.email}- {business.industry}</Link>
-          - <Button onClick={() => handleDelete(business)}>Delete</Button><br />
+          - <Button onClick={() => handleDelete(business)}>Delete</Button> - <Link to={`/businesses/${business.id}/edit`}>Edit</Link><br />
         </li>)}
 
     </div>

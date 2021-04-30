@@ -23,12 +23,12 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Container>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/businesses" component={Businesses} />
-      </Switch>
-      <Footer/>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/businesses" component={Businesses} />
+        </Switch>
+        <Footer/>
       </Container>
     </Router>
   </Provider>,
