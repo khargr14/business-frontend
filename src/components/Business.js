@@ -15,12 +15,12 @@ let business = props.businesses.filter(business => business.id == props.match.pa
 // console.log(business,"data")
 return (
   <div>
-    <h3>
+    <h1>
        {/* {business ? null: <Redirect to='/businesses'/>} */}
        {business ? business.name : null} 
        
-       <h5> {business?business.number:null} - {business?business.email:null} - {business?business.industry:null}  </h5>     
-    </h3>
+       <h6> {business?business.number:null} - {business?business.email:null} - {business?business.industry:null}  </h6>     
+    </h1>
     <ContactedsContainer business={business}/>
   </div>
 )
