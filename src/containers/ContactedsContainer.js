@@ -3,17 +3,13 @@ import ContactedInput from '../components/ContactedInput'
 import Contacteds from '../components/Contacteds'
 
 
-class ContactedsContainer extends React.Component {
-    
-    render() {
-
+const ContactedsContainer = (props) => {
         return(
             <div>
-                <ContactedInput business={this.props.business}/>
-                <Contacteds contacteds={this.props.business && this.props.business.contacteds}/>
+                <ContactedInput business={props.business}/>
+                <Contacteds contacteds={props.business && props.business.contacteds}/>
             </div>
         )
-    }
 }
 
 export default ContactedsContainer

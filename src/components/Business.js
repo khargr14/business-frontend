@@ -6,10 +6,8 @@ import ContactedsContainer from '../containers/ContactedsContainer'
 
 
 const Business = (props) => {
- 
-console.log(props)
 
-let business = props.businesses.filter(business => business.id == props.match.params.id)[0]
+const business = props.businesses.filter(business => business.id == props.match.params.id)[0]
 //let business = props.businesses[props.match.params.id-1];
 // let business=props.businesses[props.match.params.id-1];
 // console.log(business,"data")

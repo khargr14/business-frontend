@@ -4,18 +4,15 @@ import React from 'react'
 //:name, :number, :email, :date, :message
 
 const Contacteds = (props) => {
-
-    return(
+    return (
         <div>
-        {props.contacteds && props.contacteds.map(contacted => 
-     <li key={contacted.id}>
-      <h4> {contacted.name}</h4> - {contacted.number}- {contacted.email}- {contacted.date}- {contacted.message}
-     </li> )}
+            {props.contacteds && props.contacteds.map(contacted =>
+                <li key={contacted.id}>
+                    <h4> {contacted.name}</h4> - {contacted.number}- {contacted.email}- {contacted.date}- {contacted.message}
+                </li>)}
 
-   </div>
+        </div>
     )
-
-
 }
 
 export default Contacteds
