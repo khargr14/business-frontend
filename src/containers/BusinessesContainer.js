@@ -16,6 +16,7 @@ class BusinessContainer extends React.Component {
     // <Route path='/accounts' render={(routerProps) => <Accounts {...routerProps} accounts={this.props.accounts}/>}/>
 
     render() {
+        console.log('this biz props==>>', this.props)
         return (
             <div>
                 <Switch>

@@ -1,25 +1,28 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-import Business from './Business'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { deleteBusiness } from '../actions/deleteBusiness';
 
 
+const Businesses = (props) => {
 
+  const handleDelete = (business) => {
+    props.deleteBusiness(business.id)
+  }
 
-
- const Businesses = (props) => {
-                           //   :name, :number, :email, :industry, :contacted_id
-    return(
+  return (
     <div>
-         {props.businesses.map(business => 
-      <li key={business.id}>
+      {props.businesses.map(business =>
+        <li key={business.id}>
           <Link to={`/businesses/${business.id}`}>{business.name} - {business.number}- {business.email}- {business.industry}</Link>
-      </li> )}
+          - <button onClick={() => handleDelete(business)}>Delete</button><br />
+        </li>)}
 
     </div>
-       
-    
-    )
- }
- 
 
- export default Businesses
+
+  )
+}
+
+
+export default connect(null, { deleteBusiness })(Businesses);
