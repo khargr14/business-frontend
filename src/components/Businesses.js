@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import Business from './Business'
 
 
@@ -6,14 +7,19 @@ import Business from './Business'
 
 
  const Businesses = (props) => {
-                                                                 //   :name, :number, :email, :industry, :contacted_id
+                           //   :name, :number, :email, :industry, :contacted_id
     return(
-        <div>
+    <div>
          {props.businesses.map(business => 
-         <div key={business.id}><Business business={business}/></div>)}
-        </div>
+      <li key={business.id}>
+          <Link to={`/businesses/${business.id}`}>{business.name} - {business.number}- {business.email}- {business.industry}</Link>
+      </li> )}
+
+    </div>
+       
+    
     )
+ }
  
-}
 
  export default Businesses
