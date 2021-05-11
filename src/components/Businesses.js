@@ -28,3 +28,35 @@ const Businesses = (props) => {
 
 
 export default connect(null, { deleteBusiness })(Businesses);
+
+// {
+//   props.businesses
+// }
+
+// [
+//   {
+//     name: 'business 1',
+//     email: ...,
+//     number: ...,
+//     industry: ...
+//   },
+//   {
+//     name: 'business 2',
+//     email: ...,
+//     number: ...,
+//     industry: ...
+//   },
+//   {
+//     name: 'business 3',
+//     email: ...,
+//     number: ...,
+//     industry: ...
+//   },
+//   {
+//     name: 'business 4',
+//     email: ...,
+//     number: ...,
+//     industry: ...
+//   },
+
+// ]

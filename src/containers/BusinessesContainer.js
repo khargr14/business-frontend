@@ -7,16 +7,18 @@ import { fetchBusinesses } from '../actions/fetchBusinesses'
 import Business from '../components/Business'
 import BusinessFormEdit from '../components/BusinessFormEdit'
 
+//stateful class container
+
 class BusinessContainer extends React.Component {
 
     componentDidMount() {
+        console.log("a")
         this.props.fetchBusinesses();
+        console.log("b")
     }
     //<Route path='/businesses' render={(routerProps) => <Businesses {...routerProps} Businesses={this.props.Businesses}/>}/>--
 
-    // <Route path='/accounts/:id' render={(routerProps) => <Account {...routerProps} accounts={this.props.accounts}/>}/>
-    // <Route path='/accounts' render={(routerProps) => <Accounts {...routerProps} accounts={this.props.accounts}/>}/>
-
+  
     render() {
         console.log('this biz props==>>', this.props)
         return (
@@ -31,7 +33,7 @@ class BusinessContainer extends React.Component {
         )
     }
 }
-// <Businesses {...routerProps} businesses={this.props.businesses} />
+// <Businesses {...routerProps} businesses={this.props.businesses}  storing data/>
 const mapStateToProps = (state) => {
     return {
         businesses: state.businesses,
@@ -39,3 +41,4 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { fetchBusinesses })(BusinessContainer);
+

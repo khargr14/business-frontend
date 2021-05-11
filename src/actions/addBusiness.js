@@ -11,9 +11,9 @@ export const addBusiness = (data) => {
         })
 
         .then(resp => resp.json())
-        .then(business => dispatch({
+        .then(business => dispatch({ // now that data has been stored in the db, we need to update it in the browser as well
             type:'ADD_BUSINESS',
-            payload: business
+            payload: business // this is the business data ( name, email, industry, ...) that has been saved in the database
         }))
      }
     }

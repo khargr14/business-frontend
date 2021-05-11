@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import businessReducer from './reducers/businessReducer'
 
-
 import Home from './Home';
 import Businesses from './containers/BusinessesContainer';
 import NavBar from './components/NavBar';

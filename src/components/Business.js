@@ -7,6 +7,7 @@ import ContactedsContainer from '../containers/ContactedsContainer'
 
 const Business = (props) => {
 
+  // localhost:3000/business/5
 //const business = props.businesses.filter(business => business.id == props.match.params.id)[0]
 const business = useMemo(()=>{
   return props.businesses.filter(business => business.id == props.match.params.id)[0]

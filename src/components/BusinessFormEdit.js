@@ -20,9 +20,11 @@ class BusinessFormEdit extends React.Component {
     };
 
     componentDidMount(){
+        // localhost:3000/businesses/7
         const business = this.props.businesses.filter(business => business.id == this.props.match.params.id)[0];
         this.setState({
             id: business.id,
+            
             name: business.name,
             number: business.number,
             email: business.email, 

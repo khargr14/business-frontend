@@ -1,10 +1,22 @@
+
+In my application business can add new business and put in contacted information
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Also, Build with 
+create-react-app
+React
+Redux
+CSS
+HTML
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the backend RAILS API
+
+https://github.com/khargr14/business-listings-backend
 
 ### `yarn start`
 
